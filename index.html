@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AES with Login</title>
+
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- Login Page -->
+<div id="loginPage">
+    <form id="loginForm">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username"><br>
+        <input type="password" id="password" placeholder="Password"><br>
+        <button type="button" onclick="login()">Login</button>
+    </form>
+</div>
+
+<!-- AES Page -->
+<div id="aesPage">
+
+    <!-- AES Background Image -->
+    <div id="aesBg"></div>
+
+    <!-- Star Canvas -->
+    <canvas id="starCanvas"></canvas>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#tryit">Tryit</a>
+    </nav>
+
+    <!-- Header -->
+    <section class="header" id="home">
+        <h1>AES</h1>
+        <p>Advanced Encryption Standard</p>
+    </section>
+
+    <!-- About Section -->
+    <div class="container" id="about">
+
+        <div class="box">Block Size: 128 bits</div>
+        <div class="box">Key Size: 128/192/256 bits</div>
+        <div class="box">Rounds: 10/12/14</div>
+
+        <div class="definition">
+            <h2>What is AES?</h2>
+            <p>
+                AES is a symmetric-key block cipher used worldwide.
+                Supports 128/192/256-bit keys and replaced DES for higher security.
+            </p>
+        </div>
+
+        <div class="key-features">
+            <h3>Key Features</h3>
+            <ul>
+                <li>Symmetric-key encryption</li>
+                <li>Block size 128 bits</li>
+                <li>Key size 128/192/256 bits</li>
+                <li>Rounds: 10/12/14 depending on key</li>
+                <li>Substitution-Permutation network</li>
+            </ul>
+        </div>
+
+        <div class="how-aes">
+            <h3>How AES Works</h3>
+            <p>
+                AES operates on 128-bit blocks with variable key sizes.
+                It performs rounds of substitution, permutation, mixing, and key addition.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Tryit Section -->
+    <div id="tryit">
+
+        <h2>Try AES</h2>
+
+        <div class="tryit-controls">
+
+            <input type="text" id="inputText" placeholder="Enter text here">
+
+            <input type="text" id="keyInput" placeholder="Enter key (min length)">
+
+            <select id="keySizeSelect">
+                <option value="128">AES-128</option>
+                <option value="192">AES-192</option>
+                <option value="256">AES-256</option>
+            </select>
+
+            <button onclick="encryptAES()">Encrypt</button>
+            <button onclick="decryptAES()">Decrypt</button>
+            <button onclick="clearText()">Clear</button>
+            <button onclick="copyText()">Copy</button>
+            <button onclick="copyHistory()">Copy History</button>
+
+        </div>
+
+        <p id="outputText"></p>
+
+        <div id="history">
+            <strong>History:</strong>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

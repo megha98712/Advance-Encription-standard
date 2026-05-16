@@ -1,0 +1,277 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    color: white;
+}
+
+/* Login Page */
+#loginPage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url('https://static.vecteezy.com/system/resources/thumbnails/040/312/419/small_2x/ai-generated-digital-hand-presenting-cybersecurity-shield-free-photo.jpeg')
+        center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginForm {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#loginForm input {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    width: 200px;
+    font-size: 16px;
+}
+
+#loginForm button {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    background: #ffcc00;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#loginForm button:hover {
+    background: #e6b800;
+}
+
+/* AES Page hidden initially */
+#aesPage {
+    display: none;
+    position: relative;
+}
+
+/* Background Image for AES */
+#aesBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url('https://www.cobham.com/wp-content/uploads/shutterstock_281517014.webp')
+        center/cover no-repeat;
+
+    z-index: -2;
+}
+
+/* Star Canvas overlay */
+#starCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 25px;
+    z-index: 10;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: #ffcc00;
+    color: #000;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 80px;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
+}
+
+.header p {
+    font-size: 26px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Container & Boxes */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 40px 20px;
+    gap: 30px;
+
+    max-width: 1200px;
+    margin: auto;
+}
+
+.box,
+.definition,
+.key-features,
+.how-aes,
+#tryit {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.box:hover,
+.definition:hover,
+.key-features:hover,
+.how-aes:hover,
+#tryit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+}
+
+.box {
+    min-width: 220px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Text sections */
+.definition h2,
+.key-features h3,
+.how-aes h3 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ffcc00;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.definition p,
+.how-aes p,
+.key-features ul {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.key-features ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* Tryit section */
+#tryit {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+.tryit-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#tryit input,
+#tryit select,
+#tryit button {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    font-size: 16px;
+}
+
+#tryit input {
+    width: 220px;
+}
+
+#tryit select {
+    width: 150px;
+}
+
+#tryit button {
+    background: #ffcc00;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#tryit button:hover {
+    background: #e6b800;
+}
+
+#outputText {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ffcc00;
+    word-break: break-word;
+}
+
+#history {
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #tryit input,
+    #tryit select {
+        width: 80%;
+    }
+}
