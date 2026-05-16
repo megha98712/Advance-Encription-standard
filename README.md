@@ -11,12 +11,17 @@ A modern and responsive AES (Advanced Encryption Standard) web application with 
 ✨ Animated Star Background
 📱 Responsive Design
 🎨 Cybersecurity Themed UI
+
+
 🖥️ Technologies Used
+
 HTML5
 CSS3
 JavaScript
 Web Crypto API
+
 📂 Project Structure
+
 AES-Encryption-App/
 │
 ├── index.html
@@ -100,9 +105,6 @@ Export History
 Dark/Light Theme
 Stronger Login Validation
 📷 Screenshots
-
-Add screenshots here:
-
 /screenshots/login.png
 /screenshots/dashboard.png
 👩‍💻 Author
@@ -116,5 +118,8 @@ If you like this project:
 ⭐ Star the repository
 🍴 Fork the project
 📢 Share with others
+
+Agar tu chahe to main isko 
+aur pro-level GitHub README (badges + shields + live demo link + fancy styling) me upgrade karke de sakta hoon 👍
 
 If you want, I can also:
